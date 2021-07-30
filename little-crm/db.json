@@ -1,0 +1,49 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Hans",
+      "volume": 2
+    },
+    {
+      "id": 2,
+      "name": "Peter",
+      "volume": 23
+    },
+    {
+      "id": 3,
+      "name": "Hans-Peter",
+      "volume": 10
+    },
+    {
+      "id": 4,
+      "name": "Uwe",
+      "volume": 34
+    },
+    {
+      "id": 5,
+      "name": "H. Peter",
+      "volume": 70
+    },
+    {
+      "id": 6,
+      "name": "Hans II.",
+      "volume": 895000
+    },
+    {
+      "name": "test23445",
+      "volume": 0,
+      "id": 8
+    },
+    {
+      "name": "",
+      "volume": 0,
+      "id": 9
+    },
+    {
+      "name": "asdf",
+      "volume": 0,
+      "id": 11
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+<h1>Template Syntax</h1>
+<h2>Interpolation Directive</h2>
+<p>1-way: Component -> View {{info}}</p>
+<p>{{info.length}}</p>
+
+<h2>Pipes</h2>
+<p>{{title | uppercase}}</p>
+<p>{{data | json}}</p>
+<p>{{data | async | json}}</p>
+<h3>Custom Pipes</h3>
+<p>{{100 | tax:1.19}}</p>
+
+<h2>Attribute Directives</h2>
+<p [title]="title">Lorem ipsum.</p>
+<p [title]="title | uppercase">Lorem ipsum.</p>
+<h2>Styling</h2>
+
+<p class="alert" [class.alert-warning]="flag">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p [ngClass]="{
+  alert: true,
+  'alert-warning': flag,
+  'alert-info': !flag
+}">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+<p [attr.data-projectid]="info">Lorem ipsum dolor sit.</p>
+
+<h3>Custom Directive</h3>
+<p [crmHighlight]="'red'">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, impedit!</p>
+
+<h2>Structural Directives</h2>
+
+<p *ngIf="flag">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p *ngIf="!flag">Et fugit in veritatis. Asperiores dolores quos
+  voluptatem.</p>
+
+<div [ngSwitch]="role">
+<p *ngSwitchCase="Roles.Admin">Enim facere maxime perferendis quas ratione repellendus similique.</p>
+<p *ngSwitchCase="Roles.Guest">Amet asperiores culpa
+  fugiat mollitia vitae. Officiis, voluptate!</p>
+<p *ngSwitchDefault>Aperiam distinctio iure magni quis voluptas. Ad, temporibus?</p>
+</div>
+
+<ul>
+  <li *ngFor="let item of [4,5,67]">
+     {{item}}
+  </li>
+</ul>
+
+<ol>
+  <li *ngFor="let item of list">
+    {{item.id}}
+  </li>
+</ol>
+
+<h2>Event Directives</h2>
+<p>1-way: View -> Component</p>
+<p>
+<button type="button" (click)="flag = !flag">Click</button>
+</p><p>
+<button type="button" (click)="add(5)">Add</button>
+  {{counter}}
+</p>
+
+<h2>2-way-data</h2>
+<p>ngModel</p>
+<p>Template Driven Forms</p>
+<input [(ngModel)]="value"> {{value}}
+
+<h2>Component</h2>
+<crm-sub [item]="value"(addTwo)="add($event)"></crm-sub>
+
